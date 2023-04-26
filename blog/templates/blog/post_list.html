@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Joey's Blog</title>
+        <title>My Django Girls Website</title>
+        <!-- Include the static files -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
     </head>
     <body>
         <header>
-            <h1><a href="/">My First Blog</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </nav>
         </header>
-
-        {{ posts }}
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            {{ posts }}
-
-        {{ posts }}
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-            
+        <main>
+            <h1>Welcome</h1>
+            <p>My goal is a simple blog after many hours</p>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>April 12</li>
+                <li>April 26</li>
+            </ul>
+        </main>
+        <footer>
+            <p>&copy; 2023 My Django Girls Website</p>
+        </footer>
     </body>
 </html>
